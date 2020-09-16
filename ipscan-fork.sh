@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# In this version a want make a new method to arguments work,
+# And I will start to develop it in the next commits
+# For now this file do not have unlikeness on code or functions than main file 
+
 if [ "$1" == "" ] ; then
 	echo 'to show usage mode use "./ipscan -h"  or ./ipscan.sh --help'
 exit
@@ -13,14 +17,14 @@ echo ""
 if [ "$1" == "-h" ] || [ "$1" == "--help" ] ; then
 	echo "Usage mode: ./ipscan [ARGUMENTS...]  [Ip Range to Scan]"
 	echo "-i to simple scan"
-	echo "-io to gen file output"
-	echo "-ic to clean scan"
-	echo "-ioc to scan with clean output file"
+	echo "-i -o to gen file output"
+	echo "-i -c to clean scan"
+	echo "-i -o -c to scan with clean output file"
 	echo "Example:"
 	echo "./ipscan -i 10.10.10.1/24 =====>> For simple scan."
-	echo "./ipscan -io 10.10.10.1/24 =====>> For scan with output file."
-	echo "./ipscan -ic 10.10.10.1/24  =====>> For clean scan [to clean output]."
-	echo "./ipscan -ico 10.10.10.1/24  =====>> For clean output scan [to clean output file like wordlist] "
+	echo "./ipscan -i -o 10.10.10.1/24 =====>> For scan with output file."
+	echo "./ipscan -i -c 10.10.10.1/24  =====>> For clean scan [to clean output]."
+	echo "./ipscan -i -c -o 10.10.10.1/24  =====>> For clean output scan [to clean output file like wordlist] "
 fi
 
 if [ "$1" == "-i" ] ; then
